@@ -1,0 +1,66 @@
+Read me: Supplementary Figure 5 – Hill-Based Predictions for the Nav1.7 Mutations F1449V and A1632G
+
+Description:
+This folder contains the code and data required to reproduce Supplementary
+Figure 5, which shows Hill-based predictions of gating and firing changes for
+the Nav1.7 mutations F1449V (panels a–c) and A1632G (panels d–f), each compared
+with its study-specific wild-type (WT) control.
+
+The figure includes:
+- Panels a, d: Steady-state sodium activation (m_inf) and inactivation (h_inf)
+  for WT and mutant
+- Panels b, e: Membrane-potential responses to an applied current density of
+  40 µA/cm² from 50 to 150 ms
+- Panels c, f: Firing frequency as a function of applied current density
+  (f–I curves)
+
+Main Script:
+- Supplementary_Figure_5.m
+  → Generates the full figure (panels a–f)
+
+Data Files (in this folder):
+- Input data:
+  - FV_fI_curve_second_method.csv → precomputed f–I data for F1449V (panel c)
+  - AG_fI_curve_second_method.csv → precomputed f–I data for A1632G (panel f)
+  
+
+- Saved by the script (created each time it runs):
+  - Supp5_traces.mat → the simulated voltage traces of panels b and e
+
+Gating descriptors and Hill parameters are given in Supplementary Table S8.
+
+Papers:
+- Located in the "papers" folder:
+  - DibHajj2005_F1449V.pdf and Yang2016_A1632G.pdf, the sources of the
+    mutation gating changes
+  - references.txt → full reference and DOI of each paper
+
+Computation Notes:
+- Panels a and d are computed directly from the Hill parameters written in
+  the script.
+- Panels b and e are simulated inside the script (ode113, 200 ms, current step
+  from 50 to 150 ms).
+- Panels c and f load the precomputed f–I data from the two CSV files.
+- Runtime is fast (a few seconds).
+
+Output:
+- The script generates Supplementary_Figure_5.pdf and Supplementary_Figure_5.png,
+  the same as Supplementary Figure 5 in the manuscript.
+
+Requirements:
+- No additional toolboxes required
+
+Alt Text:
+Six panels of Hill-based predictions for the Nav1.7 mutations F1449V (panels
+a–c) and A1632G (panels d–f), each compared with its study-specific wild-type
+(WT) control; WT is navy and mutant is orange. Panels a and d show steady-state
+sodium activation (m∞, solid lines) and inactivation (h∞, dashed lines) from
+−130 to 40 mV. In both mutants, activation is shifted to more negative voltages
+and inactivation to more positive voltages, with a larger inactivation shift
+for A1632G. Panels b and e show membrane-potential responses to 40 µA/cm²
+applied from 50 to 150 ms: both mutants fire repetitively throughout the step,
+whereas their WT models produce a single spike. Panels c and f show firing frequency as a function of
+applied current density. The WT models fire at about 10 Hz once they start
+firing. The mutant models start firing at lower currents and reach higher
+rates, up to about 210 Hz for F1449V and 220 Hz for A1632G, followed by a sharp
+decline at about 100 and 85 µA/cm², respectively.

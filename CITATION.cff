@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Please cite the associated Scientific Reports article."
+title: "Hill-based reformulation of the Hodgkin-Huxley model for mapping gating changes to neuronal excitability"
+type: software
+authors:
+  - family-names: Saab
+    given-names: Batoul
+  - family-names: Fahs
+    given-names: Jihad
+  - family-names: Daou
+    given-names: Arij
+repository-code: "https://github.com/daoulab/hill-hh-gating-excitability"
+preferred-citation:
+  type: article
+  title: "Hill-based reformulation of the Hodgkin-Huxley model for mapping gating changes to neuronal excitability"
+  authors:
+    - family-names: Saab
+      given-names: Batoul
+    - family-names: Fahs
+      given-names: Jihad
+    - family-names: Daou
+      given-names: Arij
+  journal: Scientific Reports
+  year: 2026
+  doi: "10.1038/s41598-026-78934-z"

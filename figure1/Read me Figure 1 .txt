@@ -1,0 +1,36 @@
+Read me: Figure 1 – Comparison of Steady-State Variables and Time Constants
+
+Description:
+This folder contains the code required to reproduce the figure comparing
+the steady-state variables (x∞) and time constants (τx) for:
+
+- Original Hodgkin–Huxley (HH) model
+- Modified HH model
+
+The figure includes:
+- Top row: m∞, h∞, n∞
+- Bottom row: τm, τh, τn
+
+Main Script:
+- figure1.m
+  → Generates the full figure (all panels)
+
+Data Handling:
+- No external data files are required.
+- All model parameters and equations are defined directly within the script.
+
+Computation Notes:
+- The script computes x∞ and τx analytically from the model equations.
+- No simulations or iterative procedures are performed.
+- Runtime is very fast.
+
+Output:
+- The script generates the figure as shown in the manuscript.
+
+Requirements:
+- No additional toolboxes required
+
+Alt text for Figure 1:
+
+Six line plots comparing the original Hodgkin-Huxley (HH) model (orange) and the modified Hill-based formulation (navy) over voltages from −100 to 150 mV. Panels a, b and c show the steady-state gating variables m∞, h∞ and n∞. The modified model closely preserves their steady-state voltage dependence, with only modest differences in the position and sharpness of the transition regions: the modified h∞ is shifted slightly to more positive voltages, and the modified n∞ rises more sharply. Panels d, e and f show the time constants τm, τh and τn. τm is nearly the same in both models, while larger differences emerge in τh and τn, where the modified model has higher peaks
+

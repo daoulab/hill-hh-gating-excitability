@@ -1,0 +1,76 @@
+Read me: Supplementary Figure 3 – A863P Consistency Check Between Classical and Hill-Based HH Implementations
+
+Description:
+This folder contains the code and data required to reproduce Supplementary
+Figure 3, which compares the effects of the Nav1.7 A863P (AP) mutation and
+wild type (WT) in:
+
+- Classical Hodgkin–Huxley (HH) implementation fitted using Hill-derived
+  inactivation as a target (panels a–d)
+- Hill-based HH implementation (panels e–h)
+
+The figure includes:
+- Panels a, e: Steady-state sodium activation (m_inf) and inactivation (h_inf)
+  for WT and AP
+- Panels b, f: Mutant-to-WT rheobase ratios for activation-only,
+  inactivation-only and combined perturbations
+- Panels c, g: Representative membrane-potential responses to an applied
+  current of 40 µA/cm² from 50 to 150 ms
+- Panels d, h: Firing frequency as a function of applied current (f–I curves)
+
+Main Script:
+- Supplementary_Figure_3.m
+  → Generates the full figure (panels a–h)
+
+Functions (called by Supplementary_Figure_3.m):
+- plot_classicalHH_gating.m → draws panel a
+- plot_classicalHH_trace.m  → simulates and draws panel c
+- plot_modified_gating.m    → draws panel e
+- plot_modified_trace.m     → simulates and draws panel g
+
+Data Files (in this folder):
+- classicalHH_rheobase_data.mat → rheobase ratios for panel b
+- modified_rheobase_data.mat    → rheobase ratios for panel f
+- classicalHH_fI_data.mat       → f–I data for panel d
+- modified_fI_data.mat          → f–I data for panel h
+
+These files contain precomputed results.
+Implementation details are summarized in Supplementary Table S7.
+
+Papers:
+- Located in the "papers" folder:
+  - Harty2006_A863P.pdf, the source of the A863P gating changes
+  - references.txt → full reference and DOI
+
+Computation Notes:
+- Panels a and e are computed directly from the model equations.
+- Panels c and g are short simulations run inside the plotting functions.
+- Panels b, d, f and h load the precomputed data above.
+- Runtime is fast (a few seconds).
+
+Output:
+- The script generates Supplementary_Figure3.pdf and Supplementary_Figure3.png,
+  the same as Supplementary Figure 3 in the manuscript.
+
+Requirements:
+- No additional toolboxes required
+
+Alt Text (for the journal):
+Eight panels comparing the A863P (AP) mutation and wild type (WT) in the
+classical Hodgkin-Huxley (HH) implementation fitted using Hill-derived
+inactivation as a target (panels a–d) and the Hill-based HH implementation
+(panels e–h); WT is navy and AP is orange. Panels a and e show steady-state
+sodium activation (m∞, solid lines) and inactivation (h∞, dashed lines) from
+−130 to 40 mV; in both implementations, the AP activation curve is shifted to
+more negative voltages and the AP inactivation curve to more positive voltages.
+Panels b and f show mutant-to-WT rheobase ratios for activation-only,
+inactivation-only and combined perturbations: 0.450, 0.926 and 0.397 for the
+classical implementation, and 0.460, 0.917 and 0.407 for the Hill-based
+implementation. Panels c and g show membrane-potential responses to 40 µA/cm²
+applied from 50 to 150 ms: WT fires one spike and then settles at a depolarized
+level near −25 mV, while AP fires repetitively throughout the step. Panels d
+and h show firing frequency as a function of applied current: WT stays at about
+10 Hz, while AP firing rises to about 220 Hz in panel d and 210 Hz in panel h,
+then drops sharply at about 100 and 85 µA/cm², respectively. Both
+implementations reproduce reduced rheobase and repetitive mutant firing under
+these assumptions, supporting consistency between the selected implementations.

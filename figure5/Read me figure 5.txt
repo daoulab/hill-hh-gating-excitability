@@ -1,0 +1,66 @@
+Read me: Figure 5 – Mutation Mapping and Sensitivity to Kinetic Assumptions
+
+Description:
+This folder contains the code and data required to reproduce Figure 5.
+
+The figure includes:
+- Panel a: Schematic of the mapping from reported steady-state gating
+  descriptors to model implementations.
+- Panel b: A863P-to-wild-type (WT) rheobase ratios across Hill-based and
+  classical Hodgkin–Huxley (HH) implementations, compared with the
+  experimental mutant-to-WT current-threshold ratio (dashed line).
+- Panel c: Classical HH rheobase ratios after multiplying the activation rates
+  by phi_m and the inactivation rates by phi_h (kinetic-rescaling grid).
+- Panel d: Experimental mutant-to-WT current-threshold ratios compared with
+  Hill-model rheobase ratios for A863P, F1449V and A1632G.
+
+Main Script:
+- figure5.m
+  → Generates the full figure (panels a–d) by calling the panel functions below
+
+Panel Functions (called by figure5.m):
+- panelA_schematic_draw.m → draws panel a
+- Figure_PanelB.m         → draws panel b
+- Figure_PanelC.m         → draws panel c
+- Figure_PanelD.m         → draws panel d
+
+Data Files (in this folder):
+- Input data (loaded by the panel c function):
+    - Nav17_HH_tau_rescaling_results.mat
+
+- Saved by the script (created each time it runs):
+  - PanelB_data.mat → values plotted in panel b
+  - PanelC_data.mat → values plotted in panel c
+  - PanelD_data.mat → values plotted in panel d
+    (mutations, experimental and predicted WT/mutant values, and ratios)
+
+Computation Notes:
+- No simulations are performed in this script.
+- The script loads the saved data and generates the figure.
+- Runtime is very fast (a few seconds).
+
+Output:
+- The script generates figure5.pdf, the same as Figure 5 in the manuscript.
+- It also saves figure5.png.
+
+Requirements:
+- No additional toolboxes required
+
+Alt Text:
+Four panels about mutation mapping and sensitivity to kinetic assumptions.
+Panel a is a Schematic of the mapping from reported steady-state gating descriptors 
+to model implementations. The Hill-based mapping retains specified complementary 
+rates and an assumed inactivation construction; steady-state descriptors alone do 
+not determine gating kinetics in either formulation. Panel b shows 
+A863P-to-wild-type (WT) rheobase ratios for three Hill-HH and six classical HH
+implementations, with a dashed line at the experimental ratio of about 0.63.
+The Hill-HH values cluster tightly near 0.4, while the classical HH values
+spread from about 0.15 to 1 depending on the implementation. Panel c is a heat
+map of classical HH rheobase ratios after multiplying the activation rates by
+phi_m and the inactivation rates by phi_h (each from 0.25 to 4). The ratio
+ranges from 0.21 to 0.99 and rises as phi_h increases or phi_m decreases; the
+outlined unscaled reference cell (phi_m = phi_h = 1) is 0.41. Panel d compares
+experimental mutant-to-WT current-threshold ratios with Hill-HH predicted
+rheobase ratios: 0.63 vs 0.41 for A863P, 0.75 vs 0.46 for F1449V, and 0.65 vs
+0.36 for A1632G. The Hill-based predictions reproduce the direction of the
+experimental changes but overestimate their magnitude.

@@ -1,0 +1,10 @@
+Paper used for the A863P mutation in Supplementary Figure 3
+(reported shifts in steady-state activation and inactivation)
+
+A863P
+Harty, T. P. et al. Nav1.7 Mutant A863P in Erythromelalgia: Effects of Altered
+Activation and Steady-State Inactivation on Excitability of Nociceptive Dorsal
+Root Ganglion Neurons. J. Neurosci. 26, 12566–12575 (2006).
+DOI: https://doi.org/10.1523/JNEUROSCI.3424-06.2006
+File: Harty2006_A863P.pdf
+

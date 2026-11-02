@@ -1,0 +1,10 @@
+# MATLAB editor/autosave and local settings
+*.asv
+*.m~
+*.mexw64
+*.mexa64
+*.mexmaci64
+slprj/
+.DS_Store
+Thumbs.db
+# Keep supplied MAT, CSV, Excel and figure outputs versioned.

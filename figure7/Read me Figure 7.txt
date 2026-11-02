@@ -1,0 +1,31 @@
+Read me: Figure 7 – Comparison of Sigmoidal Fits
+
+Description:
+This folder contains the code and data required to reproduce Figure 7.
+
+The figure includes:
+- Panel a: n∞ data with fitted curves
+- Panel b: m∞ data with fitted curves
+- Panel c: βh data with fitted curves
+
+Main Script:
+- figure7.m
+  → Generates the full figure (Panels a–c)
+
+Data Files:
+- The script reads the experimental data from Excel files located in this folder.
+
+Computation Notes:
+- The fitted curves are plotted using parameters that were computed previously.
+- No optimization is performed in this script.
+- No long simulations are required.
+
+Output:
+- The script directly generates Figure 7 as shown in the manuscript.
+
+Requirements:
+- No additional toolboxes required
+
+Alt Text:
+Three panels comparing compact sigmoidal fits to the original Hodgkin-Huxley-derived gating data, plotted against voltage from −150 to 150 mV: (a) n∞, (b) m∞, and (c) beta_h (per ms). In each panel, orange markers indicate the data, and colored curves show the Hill (navy), tanh (yellow), erf (grey), arctan (green) and Boltzmann (purple) fits. All five functions follow the S-shaped rise of the data, and insets provide a zoomed view of selected regions where the fitted functions differ locally. A box in each panel reports the sum of squared error (SSE) of each fit. Across all three panels, the Hill function yields the lowest fitting error: 0.0013 in panel a, compared with 0.0018 for arctan and 0.012 to 0.019 for the others; 0.0049 in panel b, compared with 0.0074 to 0.0105; and 0.0316 in panel c, compared with 0.0355 to 0.0405. This indicates the best overall agreement with the historical Hodgkin-Huxley data and justifies the selection of the Hill function for the modified model.
+

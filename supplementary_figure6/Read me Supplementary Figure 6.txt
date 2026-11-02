@@ -1,0 +1,62 @@
+Read me: Supplementary Figure 6 – Variability in A863P Rheobase Predictions Across Accepted Fitting Ensembles
+
+Description:
+This folder contains the code and data required to reproduce Supplementary
+Figure 6, which shows the mutant-to-wild-type (WT) rheobase ratios for the
+200 accepted fits in each implementation:
+
+- Panel a: Classical Hodgkin–Huxley (HH) ensemble with all sodium-gating rate
+  parameters free (orange)
+- Panel b: Hill-based HH ensemble with the amplitude and voltage scale of the
+  alpha_h inactivation rate free (navy)
+
+Each point is one accepted fit; the horizontal axis indexes fits and does not
+denote a parameter sweep. The solid colored line is the ensemble median, and
+the dashed gray line is the experimental A863P/WT current-threshold ratio.
+
+Main Script:
+- Supplementary_Figure_6.m
+  → Generates the full figure (panels a and b)
+
+Data Files (in this folder):
+- Nav17_HH_starts_ensemble_boltz.mat → classical HH ensemble (panel a)
+- Nav17_HillAH_results.mat           → Hill-based HH ensemble (panel b)
+
+These files contain precomputed fitting results.
+Implementation details are provided in Supplementary Table S7.
+
+Papers:
+- Located in the "papers" folder:
+  - Harty2006_A863P.pdf, the source of the experimental A863P ratio and the
+    published steady-state targets
+  - references.txt → full reference and DOI
+
+Computation Notes:
+- No fitting or simulations are performed in this script.
+- The script loads the saved ensembles and draws the figure.
+- Runtime is very fast (a few seconds).
+
+Output:
+- The script generates Supplementary_Figure_6.pdf and Supplementary_Figure_6.png
+  , the same as Supplementary Figure 6 in the manuscript.
+
+Requirements:
+- No additional toolboxes required
+
+Alt Text (for the journal):
+Two scatter plots of A863P-to-wild-type (WT) rheobase ratios for 200 accepted
+fits in each implementation, plotted against accepted fit index; the
+horizontal axis indexes fits and does not denote a parameter sweep. Panel a
+shows the classical Hodgkin-Huxley (HH) ensemble with all sodium-gating rate
+parameters free (orange), and panel b shows the Hill-based HH ensemble with the
+amplitude and voltage scale of alpha_h rate free (navy).
+Both panels use the same vertical scale. In each panel, a solid colored line
+marks the ensemble median and a dashed gray line marks the experimental
+A863P/WT current-threshold ratio of about 0.63. The classical HH ratios are
+widely scattered, from about 0.15 to 0.93, with a median of 0.298; most fall
+below the experimental ratio, but some lie above it. The Hill-based ratios
+form a narrow band from 0.346 to 0.446, with a median of 0.395, all below the
+experimental ratio. Because the two ensembles use different targets and rate
+assumptions, the narrower Hill-based distribution reflects repeatability under
+its specified targets rather than uniquely determined kinetics or superior
+quantitative prediction.

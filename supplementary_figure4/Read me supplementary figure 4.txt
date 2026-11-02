@@ -1,0 +1,68 @@
+Read me: Supplementary Figure 4 – Sodium-Gating Time Constants Across A863P Fitting Ensembles
+
+Description:
+This folder contains the code and data required to reproduce Supplementary
+Figure 4, which shows the voltage dependence of the sodium activation time
+constant (tau_m) and inactivation time constant (tau_h) for wild type (WT)
+and A863P in:
+
+- Classical Hodgkin–Huxley (HH) implementation (panels a–d, orange)
+- Hill-based HH implementation (panels e–h, navy)
+
+The figure includes:
+- Panels a, e: tau_m, WT
+- Panels b, f: tau_m, A863P
+- Panels c, g: tau_h, WT
+- Panels d, h: tau_h, A863P
+
+In each panel, thin lines show individual accepted fits, the thick line is the
+ensemble median, and the dashed gray line is the voltage-shifted classical HH
+time constant used as a reference.
+
+Main Script:
+- Supplementary_Figure_4.m
+  → Generates the full figure (panels a–h)
+
+Data Files (in this folder):
+- tau.mat → precomputed fitting ensembles (time constants and steady-state
+  curves of all accepted fits, the published target curves, and the
+  classical HH reference)
+
+Papers:
+- Located in the "papers" folder:
+  - Harty2006_A863P.pdf, the source of the published A863P steady-state curves
+  - references.txt → full reference and DOI
+
+Computation Notes:
+- No fitting or simulations are performed in this script.
+- The script loads tau.mat, computes the shifted classical HH reference
+  curves from the classical rate equations, and draws the figure.
+- Time constants are plotted on a logarithmic axis.
+- Runtime is very fast (a few seconds).
+
+Output:
+- The script generates Supplementary_Figure_4.pdf and Supplementary_Figure_4.png,
+  the same as Supplementary Figure 4 in the manuscript.
+
+Requirements:
+- No additional toolboxes required
+
+Alt Text:
+Eight panels showing the voltage dependence of the sodium activation time
+constant (τm) and inactivation time constant (τh) across A863P fitting
+ensembles, from −120 to 40 mV on a logarithmic time-constant axis. Panels a–d
+show the classical Hodgkin-Huxley (HH) ensemble (orange) and panels e–h the
+Hill-based HH ensemble (navy): τm for wild type (WT) in panels a and e, τm for
+A863P in panels b and f, τh for WT in panels c and g, and τh for A863P in
+panels d and h. Thin lines show individual fits, thick lines indicate ensemble
+medians, and dashed gray lines show the voltage-shifted classical HH time
+constants used as references. In the classical panels, the τm fits form a
+narrow band that rises steeply with voltage and peaks between about −10 and
+0 mV, while the τh fits spread widely, over about four orders of magnitude. In
+the Hill-based panels, most fits lie close together. The Hill-based τm follows
+the shifted classical curve up to its peak near −20 mV for WT and lies below it
+for A863P, while the Hill-based τh stays lower and flatter than the classical
+reference at negative voltages. The ensembles illustrate the kinetic
+variability compatible with the selected steady-state targets and rate
+assumptions; because the two ensembles use different inactivation targets,
+they do not constitute a comparison under identical constraints.

@@ -1,0 +1,15 @@
+Papers used for the F1449V and A1632G mutations in Supplementary Figure 5
+(reported shifts in steady-state activation and inactivation)
+
+F1449V
+Dib-Hajj, S. D. et al. Gain-of-function mutation in Nav1.7 in familial
+erythromelalgia induces bursting of sensory neurons. Brain 128, 1847–1854 (2005).
+DOI: https://doi.org/10.1093/brain/awh514
+File: DibHajj2005_F1449V.pdf
+
+A1632G
+Yang, Y. et al. Nav1.7-A1632G Mutation from a Family with Inherited
+Erythromelalgia: Enhanced Firing of Dorsal Root Ganglia Neurons Evoked by
+Thermal Stimuli. J. Neurosci. 36, 7511–7522 (2016).
+DOI: https://doi.org/10.1523/JNEUROSCI.0462-16.2016
+File: Yang2016_A1632G.pdf

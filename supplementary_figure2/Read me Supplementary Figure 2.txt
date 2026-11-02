@@ -1,0 +1,45 @@
+Read me: Supplementary Figure 2 – Scatter Analysis of Spike Features
+
+Description:
+This folder contains the code and data required to reproduce Supplementary Figure 2.
+
+The figure presents scatter plots comparing features of first, second, and average spikes for:
+- Original Hodgkin–Huxley (HH) model
+- Modified HH model
+
+The analyzed features include:
+- Spike amplitude
+- Spike threshold
+- Spike width
+- After-hyperpolarization (AHP)
+
+Main Script:
+- supplementary_figure2.m
+  → Generates the full figure
+
+Data Files:
+- Located in the "cache_scatter" folder:
+  - amplitude_HH_scatter.mat
+  - amplitude_modified_scatter.mat
+  - threshold_HH_scatter.mat
+  - threshold_modified_scatter.mat
+  - width_HH_scatter.mat
+  - width_modified_scatter.mat
+  - ahp_HH_scatter.mat
+  - ahp_modified_scatter.mat
+
+These files contain precomputed data used for plotting the scatter distributions.
+
+Computation Notes:
+- No simulations are performed in this script.
+- The script directly loads precomputed data from the cache_scatter folder.
+- Runtime is very fast.
+
+Output:
+- The script generates Supplementary Figure 2 as shown in the manuscript.
+
+Requirements:
+- No additional toolboxes required
+
+Alt Text:
+Eight scatter plots comparing first-spike (blue) and second-spike (orange) feature values with the mean of the same feature across spikes 3 to the end of the train, for the original Hodgkin-Huxley (HH) model (panels a–d) and the Hill-based HH model (panels e–h). The features are spike amplitude (a, e), voltage threshold (b, f), width (c, g), and afterhyperpolarization (AHP; d, h). Each point represents a simulated spike train, with the later-spike mean on the x-axis and the first- or second-spike value on the y-axis; a dashed black line shows identity (y = x). In both models and for all four features, the second-spike points lie close to the identity line, while the first-spike points move away from it: the first-spike amplitude stays high (mostly near 140 to 155 mV), its threshold stays at about −65 mV, its width is wider than later spikes, and its AHP stays mostly between 0 and 10 mV, regardless the later-spike mean. This supports using second-spike measurements in the spike-feature sensitivity analysis in Figure 4.

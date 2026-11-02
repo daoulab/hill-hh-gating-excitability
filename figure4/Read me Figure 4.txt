@@ -1,0 +1,61 @@
+Read me: Figure 4 – Sensitivity Heatmaps of Spike Features
+
+Description:
+This folder contains the code and data required to reproduce Figure 4.
+
+The figure presents heatmaps showing the effect of parameter variations on second-spike features for:
+- Original Hodgkin–Huxley (HH) model
+- Modified HH model
+
+The analyzed features include:
+- Spike amplitude
+- Spike threshold
+- Spike width
+- After-hyperpolarization (AHP)
+
+Main Script:
+- figure4.m
+  → Generates the full figure (all heatmaps)
+
+Data Files:
+- Located in the "cache" folder:
+  - amplitude_HH.mat
+  - amplitude_MOD.mat
+  - threshold_HH.mat
+  - threshold_MOD.mat
+  - width_HH.mat
+  - width_MOD.mat
+  - ahp_HH.mat
+  - ahp_MOD.mat
+
+These files contain precomputed results from parameter sweeps.
+
+Computation Notes:
+- No simulations are performed in this script.
+- The script directly loads precomputed data from the cache folder.
+- Runtime is very fast.
+
+Output:
+- The script generates Figure 4 as shown in the manuscript.
+
+Requirements:
+- No additional toolboxes required
+
+Alt Text:
+Heat maps of four second-spike features for the original Hodgkin-Huxley (HH)
+model and the modified Hill-based HH formulation. The four columns show
+amplitude (56.21 to 138.80 mV), threshold (−68.54 to −47.44 mV), width (about
+0.77 to 2.37 ms) and after-hyperpolarization (AHP, about −5.81 to 27.75 mV). Colors go
+from dark red or black (low values) to yellow and white (high values), and
+color scales are matched within each feature column across the two models. In
+each model block, each row corresponds to one varied parameter, with all
+remaining parameters held fixed at their reference values, and black stars
+mark the reference parameter value. The original HH block has 16 rows: the
+parameters A to E for each of the m, n and h gates, and the applied current.
+The modified HH block has 10 rows: the nine Hill parameters (horizontal shifts
+a_m, a_n and a_h; steepness l_m, l_n and l_h; and Hill midpoints V_half,m,
+V_half,n and V_half,h), and the applied current. Both models show strong
+modulation of all four features. In the modified model, for example, a_m, l_m
+and V_half,m strongly change threshold and AHP, and increasing l_n strongly
+reduces amplitude.
+

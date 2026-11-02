@@ -1,0 +1,45 @@
+Read me: Figure 2 – Comparison of Applied Current Mapping and Firing Response
+
+Description:
+This folder contains the code required to reproduce Figure 2.
+
+- Panel a: Linear relationship between the applied current in the original HH model and the modified model (I_app mapping with RMSE < 10).
+- Panel b: Firing frequency versus applied current (I_app) for both the original Hodgkin–Huxley (HH) model and the modified model.
+
+Main Script:
+- figure2.m
+  → Generates the full figure (Panels A and B)
+
+Data Handling:
+- Panel a:
+  The plotted data is directly included within the script as predefined arrays (no external data files required).
+
+- Panel b:
+  The script contains the full implementation of both the original HH model and the modified model.
+  Simulations are performed within the script to compute firing frequencies.
+
+Computation Notes:
+- Total runtime is less than 1 minute.
+- No external datasets are needed.
+
+Output:
+- The script directly generates Figure 2 as shown in the manuscript.
+
+Requirements:
+- No additional toolboxes or libraries required
+
+
+Alt Text:
+Two panels comparing the original Hodgkin-Huxley (HH) model (orange) and the
+modified HH model (navy). Panel a shows the applied current in the modified HH
+model plotted against the applied current in the original HH model, from 
+10 to 120 µA/cm². Orange markers show current pairs that produce matched
+responses (RMSE < 10 mV), and they fall on the navy best linear fit,
+I_mod = 1.178 × I_HH − 2.041, with a coefficient of determination almost equal
+to 1. Panel b shows the frequency-current (f–I) relationships of both models
+from 0 to 200 µA/cm². The modified model closely reproduces the behavior of the
+original model, including firing onset, the stepwise increase in firing rate
+over intermediate inputs, the high-frequency plateau at about 160 Hz, and the
+breakdown of sustained repetitive firing at strong drive. The modified curve is
+shifted slightly to higher currents: for example, firing breaks down at about
+145 µA/cm² instead of about 125 µA/cm².

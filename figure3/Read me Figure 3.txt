@@ -1,0 +1,62 @@
+Read me: Figure 3 – 2D Excitability Regime Maps
+
+Description:
+This folder contains the code and data required to reproduce the 2D excitability maps.
+
+The figure presents 2D maps of neuronal firing regimes as a function of:
+- Applied current (I_app)
+- Model parameters (a, V_half, and Hill coefficients)
+
+Each panel shows the firing regime classification:
+- silent
+- single spike
+- tonic firing
+- spontaneous firing
+- depolarization block
+
+Main Scripts:
+- figure3.m
+  → Loads precomputed data and generates the full figure 
+
+Data Files:
+- Located in the "cache_excitability" folder:
+  - a_m_regime_map.mat
+  - a_n_regime_map.mat
+  - a_h_regime_map.mat
+  - vhalf_m_regime_map.mat
+  - vhalf_n_regime_map.mat
+  - vhalf_h_regime_map.mat
+  - hill_n_m_regime_map.mat
+  - hill_n_n_regime_map.mat
+  - hill_n_h_regime_map.mat
+
+These files contain precomputed regime classification maps.
+
+Computation Notes:
+- No simulations are performed in this script.
+- The script directly loads saved data and generates the figure.
+- Runtime is very fast (a few seconds).
+
+Output:
+- The plotting script reproduces the full figure as shown in the manuscript.
+
+Requirements:
+- No additional toolboxes required
+
+Alt Text:
+Nine regime maps (panels a–i) for the modified Hodgkin-Huxley model. Each panel
+shows the applied current (I_app, 0 to about 115 µA/cm²) against one Hill
+parameter, with all other parameters held fixed. Colors mark the firing regime:
+silent (grey), single spike (orange), tonic firing (navy), spontaneous firing
+(green), and depolarization block (brown). A white dashed line marks the
+baseline value of each parameter, which lies in the tonic firing region in
+every panel. Panels a–c show the shift parameters a_m, a_n and a_h; panels d–f
+show the Hill midpoint parameters V_half,m, V_half,n and V_half,h; and panels
+g–i show the Hill coefficients l_m, l_n and l_h. In all panels, the regimes
+form broad, contiguous regions. For the m and n gates (panels a, b, d, e, g
+and h), moving the parameter in one direction from its baseline value leads to
+a wide band of spontaneous firing and then silence. For the h gate (panels c,
+f and i), tonic firing covers a wide range of values, with single spikes at low
+and high currents, depolarization block at high values of a_h and V_half,h
+(panels c and f), and silence at high l_h (panel i).
+
