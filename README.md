@@ -53,10 +53,6 @@ The optional launcher changes to the selected figure folder, calls its entry poi
 | S5 | `supplementary_figure5` | `Supplementary_Figure_5.m` | Two frequency-current CSVs; gating calculations and voltage simulations |
 | S6 | `supplementary_figure6` | `Supplementary_Figure_6.m` | Saved classical and Hill fitting ensembles |
 
-## Important Figure 5b limitation
-
-The seven CSV inputs requested by `Figure_PanelB.m` were not supplied. The unmodified script therefore uses its embedded scalar or three-value summaries. **Boxes generated from these summaries are not distributions of all accepted fits.** Do not infer ensemble quartiles or whiskers from the summary-only reconstruction. The supplied figure exports are reference artifacts, not independently verified reproductions of full underlying distributions. See `docs/REPRODUCIBILITY.md` for the missing filenames and details.
-
 ## Citation and reuse
 
 Please cite the paper using the DOI above; machine-readable metadata is provided in `CITATION.cff`. No software/data reuse license has been selected for this deposit. Public availability, if enabled, should not be interpreted as an additional reuse license.
