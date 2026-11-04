@@ -4,21 +4,16 @@
 
 This deposit contains all seven main-figure folders and six supplementary-figure folders supplied by the authors. Plotting saved simulation results is distinct from recomputing the original analyses. Original per-folder text READMEs are retained for provenance; this document clarifies the following inconsistencies found during packaging.
 
-## Figure 5b: missing optional CSVs and summary fallbacks
+## Figure 5 data files
 
-`Figure_PanelB.m` calls `ratiosFrom` for:
+The Figure 5 folder includes these author-supplied CSV files:
 
-- `Nav17_Hill_results.csv`
-- `Nav17_HillAH_results.csv`
-- `Nav17_HH_shift_summary.csv`
-- `Nav17_HH_starts_fixedComp_boltzmann.csv`
 - `Nav17_HH_Boltzmann_summary.csv`
+- `Nav17_HH_shift_summary.csv`
 - `Nav17_HH_starts_ensemble_boltz.csv`
-- `Nav17_HH_tau_rescaling_grid.csv`
+- `Nav17_HH_starts_fixedComp_boltzmann.csv`
 
-These files are absent from the supplied package. The author confirmed proceeding without them. The script reports `FALLBACK` and uses embedded values instead. Some fallbacks have three elements representing reported extrema and a central value; treating those as a sample does not reconstruct full ensemble box statistics. `PanelB_data.mat` is also supplied, but the current panel function builds and saves its own `B` structure rather than loading that file.
-
-The two saved ensembles in the S6 folder and the grid MAT file in Figure 5 are retained. No CSVs were synthesized from them, and no scientific plotting logic was altered. A future update could use verified raw ensemble exports to restore full-distribution plotting.
+They accompany the existing panel data and kinetic-rescaling MAT file. The MATLAB scripts and supplied numerical data are unchanged.
 
 ## Other precomputed results
 

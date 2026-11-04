@@ -1,0 +1,2 @@
+Model,Input_data,Extra_assumptions,Rheo_WT,Rheo_AP,Ratio_AP_WT,Exp_ratio,PredErr_pct,Spikes_WT_I20,Spikes_AP_I20,Freq_WT_I20_Hz,Freq_AP_I20_Hz,Spikes_WT_I40,Spikes_AP_I40,Freq_WT_I40_Hz,Freq_AP_I40_Hz
+"Classical HH, voltage shift only","Published V1/2 of m_inf and h_inf (WT, A863P); slope not used",Classical rates shifted along V (alpha and beta together) to the published V1/2; classical slope and time constants kept,37.75,12.40625,0.32864238410596,0.63,-47.8345422054031,0,1,0,10,1,1,10,10
